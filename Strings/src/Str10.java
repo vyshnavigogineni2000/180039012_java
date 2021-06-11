@@ -1,19 +1,16 @@
 import java.util.Scanner;
 
 public class Str10 {
-	public static String repeatEnd(String str, int n) {
-		  int len = str.length();
-		  String newWord = "";
-		  for (int i = 0; i < n; i++) {
-		    newWord += str.substring(len - n, len);
-		  }
-		  return newWord;
+	public static void main(String[] args) {
+		String str = "Wipro";
+		int n = 3;
+		
+		StringBuffer sb = new StringBuffer();
+			
+		for (int i = 0; i < n; i++) {
+			sb.append(str.substring(str.length() - n));
 		}
-	public static void main(String[] args)
-	{
-		Scanner sc=new Scanner(System.in);
-	    String str = sc.nextLine();  
-	    int n=sc.nextInt();
-	    System.out.print(repeatEnd(str, n));
+
+		System.out.println(sb);
 	}
 }
